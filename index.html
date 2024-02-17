@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alphabet Clash</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <main class="bg-[#010313] min-h-screen bg-[url('/images/background.png')] bg-no-repeat bg-center ">
+        <section id="home" class="min-h-screen text-white flex justify-center items-center">
+            <div class="flex flex-col items-center gap-5">
+                <h1 class="text-6xl">Alphabet clash</h1>
+                <p class="">Let's check you keyboard knowledge</p>
+                <button id="play-now" onclick="start()" class="btn">Play Now</button>
+            </div>
+        </section>
+        <section id="playground" class="hidden space-y-5 pt-5">
+            <div class="flex items-center justify-center ">
+                <div
+                    class="artboard artboard-horizontal h-[250px] w-[800px] border-[10px] rounded-xl border-[#010313CC] bg-[#FFFFFFB3]">
+                    <div class="flex justify-center">
+                        <p class="bg-[#010313CC] text-white p-1">Don't watch keyboard while playing....</p>
+                    </div>
+                    <div class="flex justify-center items-center h-full">
+                        <p id="disp-char" class="text-5xl font-bold uppercase text-black">X</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="flex justify-center gap-1 my-1 w-full">
+                    <kbd id="q" class="uppercase kbd">q</kbd>
+                    <kbd id="w" class="uppercase kbd">w</kbd>
+                    <kbd id="e" class="uppercase kbd">e</kbd>
+                    <kbd id="r" class="uppercase kbd">r</kbd>
+                    <kbd id="t" class="uppercase kbd">t</kbd>
+                    <kbd id="y" class="uppercase kbd">y</kbd>
+                    <kbd id="u" class="uppercase kbd">u</kbd>
+                    <kbd id="i" class="uppercase kbd">i</kbd>
+                    <kbd id="o" class="uppercase kbd">o</kbd>
+                    <kbd id="p" class="uppercase kbd">p</kbd>
+                </div>
+                <div class="flex justify-center gap-1 my-1 w-full">
+                    <kbd id = "a" class="uppercase kbd">a</kbd>
+                    <kbd id = "s" class="uppercase kbd">s</kbd>
+                    <kbd id = "d" class="uppercase kbd">d</kbd>
+                    <kbd id = "f" class="uppercase kbd">f</kbd>
+                    <kbd id = "g" class="uppercase kbd">g</kbd>
+                    <kbd id = "h" class="uppercase kbd">h</kbd>
+                    <kbd id = "j" class="uppercase kbd">j</kbd>
+                    <kbd id = "k" class="uppercase kbd">k</kbd>
+                    <kbd id = "l" class="uppercase kbd">l</kbd>
+                </div>
+                <div class="flex justify-center gap-1 my-1 w-full">
+                    <kbd id="z" class="uppercase kbd">z</kbd>
+                    <kbd id="x" class="uppercase kbd">x</kbd>
+                    <kbd id="c" class="uppercase kbd">c</kbd>
+                    <kbd id="v" class="uppercase kbd">v</kbd>
+                    <kbd id="b" class="uppercase kbd">b</kbd>
+                    <kbd id="n" class="uppercase kbd">n</kbd>
+                    <kbd id="m" class="uppercase kbd">m</kbd>
+                    <kbd id="/" class="uppercase kbd">/</kbd>
+                </div>
+            </div>
+            <div class="flex justify-around">
+                <button class="btn bg-green-400 border-none">
+                    Life
+                    <img src="images/heart.svg" alt="">
+                    <span id="life">5</span>
+                </button>
+                <button class="btn bg-green-400 border-none">
+                    Score
+                    <img src="images/dollar.svg" alt="">
+                    <span id="score">15</span>
+                </button>
+            </div>
+        </section>
+        <section id="result" class="hidden text-white flex justify-center items-center min-h-screen">
+            <div class="bg-green-400 p-8 rounded-xl space-y-3 flex flex-col items-center">
+                <p class="text-3xl font-bold">Score: <span id="final-score">15</span></p>
+                <button onclick="start()" id="play-again" class="btn font-bold">Play Again</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/index.js"></script>
+    <script src="js/utility.js"></script>
+</body>
+
+</html>
